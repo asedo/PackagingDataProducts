@@ -1,0 +1,40 @@
+---
+title: "Packaging Data Products Assignment 1"
+author: "Arturo"
+date: "October 26, 2016"
+output: ioslides_presentation
+---
+
+## Scope
+This assigment does two things.
+
+1. Completes the requirement to pass week 2 in the coursera course
+2. Adds a URL that contains links to videos that I may want to visit later on.
+
+
+## Interactive Map Requirement
+
+```{r}
+library(leaflet)
+
+mwhUrl = c("<a href='https://www.mwmc.com/home'> MetroWest Hospital</a>")
+
+my_map = leaflet() %>% 
+  addTiles() %>%
+  addMarkers(lat=42.280721,lng=-71.335463, popup = mwhUrl)
+
+
+```
+
+## This is the actual map
+
+```{r, echo=FALSE}
+my_map
+```
+
+## This is a link to some videos that may be useful
+
+[https://www.youtube.com/playlist?list=PLpl-gQkQivXhr9PyOWSA3aOHf4ZNTrs90](https://www.youtube.com/playlist?list=PLpl-gQkQivXhr9PyOWSA3aOHf4ZNTrs90)
+
+
+
