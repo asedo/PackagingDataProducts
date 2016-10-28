@@ -9,6 +9,8 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+
+Date : 10/28/2016
 ---
 
 
@@ -57,11 +59,12 @@ This program was written using shiny, a package from RStudio that has the follow
 
 ## Program
 This Shiny code found at :
-
+[https://github.com/asedo/PackagingDataProducts/tree/gh-pages/week4](https://github.com/asedo/PackagingDataProducts/tree/gh-pages/week4)
 
 And the program iteslf can be run at: 
+[https://asedo.github.io/PackagingDataProducts/week4/](https://asedo.github.io/PackagingDataProducts/week4/)
 
-
+Enjoy!!
 
 
 
