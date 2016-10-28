@@ -58,12 +58,15 @@ This program was written using shiny, a package from RStudio that has the follow
 
 ## Program
 This URL is :
+
 [https://asedo.github.io/PackagingDataProducts/week4/](https://asedo.github.io/PackagingDataProducts/week4/)
 
 The Shiny code found at :
+
 [https://github.com/asedo/PackagingDataProducts/tree/gh-pages/week4](https://github.com/asedo/PackagingDataProducts/tree/gh-pages/week4)
 
 And the program iteslf can be run at: 
+
 [https://asedo.shinyapps.io/shiny](https://asedo.shinyapps.io/shiny/)
 
 Enjoy!!
