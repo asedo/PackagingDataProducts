@@ -1,0 +1,8 @@
+name: shiny
+account: asedo
+server: shinyapps.io
+bundleId: 599767
+url: https://asedo.shinyapps.io/shiny/
+when: 1477688701.86236
+asMultiple: FALSE
+asStatic: FALSE

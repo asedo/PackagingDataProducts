@@ -1,0 +1,47 @@
+---
+title: "Packaging Data Products Week 3 Assignment"
+author: "Arturo"
+date: "October 27, 2016"
+output: ioslides_presentation
+---
+
+
+```{r echo=FALSE, message=FALSE,results='hide', warning=FALSE}
+library(leaflet)
+library(plotly)
+rm(list = ls())
+Pop = as.vector(state.x77[,1])
+State= state.abb
+state_pop = data.frame(State, Pop)
+                       
+state_pop$hover= with(state_pop, paste(State, '<br>',"Population:", Pop))
+
+borders = list(color= toRGB("blue"))
+map_options = list(
+        scope = 'usa', projection = list(type='albers usa', showlakes = TRUE, lakecolor = toRGB('white'))
+)
+
+USplot = plot_ly(state_pop, x=~State,  x= ~Pop )
+USmap =plot_ly(state_pop, z = Pop, text=~hover, locations = State, type='choropleth', locationmode='USA-states', color = Pop, colors='Blues', marker=list(line = borders))%>%
+  layout(title = 'US Population in 1975', geo = map_options)
+
+
+#USmap
+```
+
+
+## This is the graph page.
+Note: Plotly seems to run using active X. I could not get firefox to render the page properly. Please view with IE.
+
+```{r}
+plot_ly(z = ~volcano, type = "surface" , colors = "Reds")
+
+```
+
+## This is the map page
+```{r}
+USmap
+```
+
+
+
