@@ -1,0 +1,95 @@
+Packaging Data Products Week4 Project
+========================================================
+author: Arturo
+date: 10/28/2016
+
+Introduction
+========================================================
+Population and unemployment 
+
+- This is the final project for the Coursera course Developing Data Products
+- This project is for the Coursera course Packaging Data Products built off of the economics data set found in the caret package.
+In general, this is a very simple project that shows my ability to create a shiny application.
+- The application itself is quite simple as well. We take the economics data set and we graph the date with population and number of people unemployed. The interactive feature allows you to change the date parameters allowing you to adjust the view of the actual graph.
+
+ui.R file
+========================================================
+This page shows the code in the ui.R file
+
+# Use a fluid Bootstrap layout
+fluidPage(    
+  
+  # Give the page a title
+  titlePanel("Population and unemployment"),
+  h4("This is the final project for the Coursera course Developing Data Products"),
+  h5("This project is for the Coursera course Packaging Data Products built off of the economics data set found in the caret package.
+In general, this is a very simple project that shows my ability to create a shiny application."),
+  h5("The application itself is quite simple as well. We take the economics data set and we graph the date with population and number of people unemployed. The interactive feature allows you to change the date parameters allowing you to adjust the view of the actual graph"),
+  br(), br(),
+  # Generate a row with a sidebar
+  sidebarLayout(      
+    
+    # Define the sidebar with one input
+    sidebarPanel(
+      dateInput('dateS',
+                label = 'Start Date input: yyyy-mm-dd',
+                value = "1967-07-01"
+      ),
+      
+      dateInput('dateE',
+                label = 'End$ Date input: yyyy-mm-dd',
+                value = "2015-04-01"
+      
+                
+                )
+      ),
+    
+    
+    # Create a spot for the barplot
+    mainPanel(
+      verbatimTextOutput("dateS"),
+      verbatimTextOutput("dateE"),
+      plotOutput("populationPlot")  
+    )
+    
+  )
+)
+
+server.R file
+========================================================
+This page shows the code in the server.R file
+
+#The caret package is used only to bring in the economics data set.
+# Here we will get economics data and plot population and date
+library(caret)
+library(shiny)
+data("economics")
+
+# Define a server for the Shiny app
+function(input, output, session) {
+  
+#  output$dateRangeText  <- renderText({
+#     paste("input$dateRange is", 
+#           paste(as.character(input$dateRange), collapse = " to ")
+#     })
+    output$dateS  <- renderText({
+      paste("input$dateS is", as.character(input$dateS))
+    })
+    output$dateE  <- renderText({
+      paste("input$dateE is", as.character(input$dateE))
+    })
+      # Fill in the spot we created for a plot
+  output$populationPlot <- renderPlot({
+    economicsf = subset(economics, date > input$dateS & date < input$dateE)
+       print(ggplot(economicsf, aes(x=date))+geom_line(aes(y=pop), color="red")+geom_line(aes(y=economicsf$unemploy), color="blue"))
+     })
+}
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+runApp('~/Coursera/Analytics/PackagingDataProducts/week4')
+```
+
+

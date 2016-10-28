@@ -1,0 +1,68 @@
+---
+title       : Packaging Data Products Week4 Project
+subtitle    : This is the final project for the Coursera course Developing Data Products
+author      : Arturo
+job         : Technologist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+
+## Introduction
+Population and unemployment 
+
+- This is the final project for the Coursera course Developing Data Products
+- This project is for the Coursera course Packaging Data Products built off of the economics data set found in the caret package.
+In general, this is a very simple project that shows my ability to create a shiny application.
+- The application itself is quite simple as well. We take the economics data set and we graph the date with population and number of people unemployed. The interactive feature allows you to change the date parameters allowing you to adjust the view of the actual graph.
+
+---
+
+## The Data
+
+USs Economic Time Series
+
+This dataset was produced from US economic time series data available from [Here](http://research.stlouisfed.org/fred2). 
+
+The data has only 6 Variables
+
+1. date - Month of data collection
+
+2. psavert - personal savings rate, http://research.stlouisfed.org/fred2/series/PSAVERT/
+
+3. pce - personal consumption expenditures, in billions of dollars, 
+
+4. unemploy - number of unemployed in thousands, 
+
+5. uempmed - median duration of unemployment, in week, 
+
+6. pop, total population, in thousands, http://research.stlouisfed.org/fred2/series/POP
+
+---
+
+## How it was written
+This program was written using shiny, a package from RStudio that has the following features 
+ * Used to build interactive web pages using R. 
+ * Has a special markup language that 
+ * Easy to convert and display R code into HTML
+ * Easy to write themed web pages without knowing Javascript and CSS
+ * Great option for simple web R based pages
+ 
+
+---
+
+## Program
+This Shiny code found at :
+
+
+And the program iteslf can be run at: 
+
+
+
+
+
+

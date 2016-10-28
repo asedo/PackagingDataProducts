@@ -1,15 +1,15 @@
 
 
-# Rely on the 'WorldPhones' dataset in the datasets
-# package (which generally comes preloaded).
-library(datasets)
-
 # Use a fluid Bootstrap layout
 fluidPage(    
   
   # Give the page a title
   titlePanel("Population and unemployment"),
-  
+  h4("This is the final project for the Coursera course Developing Data Products"),
+  h5("This project is for the Coursera course Packaging Data Products built off of the economics data set found in the caret package.
+In general, this is a very simple project that shows my ability to create a shiny application."),
+  h5("The application itself is quite simple as well. We take the economics data set and we graph the date with population and number of people unemployed. The interactive feature allows you to change the date parameters allowing you to adjust the view of the actual graph"),
+  br(), br(),
   # Generate a row with a sidebar
   sidebarLayout(      
     

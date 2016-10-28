@@ -1,6 +1,8 @@
 
-#Here we will get economics data and plot population and date
-library(dplyr)
+#The caret package is used only to bring in the economics data set.
+# Here we will get economics data and plot population and date
+library(caret)
+library(shiny)
 data("economics")
 
 # Define a server for the Shiny app
@@ -22,4 +24,3 @@ function(input, output, session) {
        print(ggplot(economicsf, aes(x=date))+geom_line(aes(y=pop), color="red")+geom_line(aes(y=economicsf$unemploy), color="blue"))
      })
 }
-
